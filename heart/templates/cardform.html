@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+
+{% block title %}Карточка ввода данных{% endblock %}
+{% block content %}
+    <h1>Введите данные</h1>
+
+    <form method="post" action="/calculation">
+        {% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Ввод данных">
+    </form>
+{% endblock %}

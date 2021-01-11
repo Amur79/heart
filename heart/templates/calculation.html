@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block title %}Карточка ввода данных{% endblock %}
+{% block content %}
+    <h1>Вывод результатов</h1>
+
+      {% csrf_token %}
+        <table>
+            {{ formout.as_table }}
+        </table>
+
+{% endblock %}

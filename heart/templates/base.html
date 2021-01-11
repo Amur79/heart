@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/CSS">
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!—Название сайта и кнопка раскрытия меню для мобильных-->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!—Само меню-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Главная страница</a></li>
+        <li><a href="/cardform">Ввод данных</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+<p>
+
+</p>
+    <hr>
+<p>Спасибо, что посетили наш сайт</p>
+{% endblock %}
+</body>
+</html>

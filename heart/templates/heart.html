@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+<h1>ВЫВОДИМ ДАННЫЕ</h1>
+<font color="green">
+
+{% if data_art > 0.5 %}
+    <font color="red">
+{% endif%}
+
+<p>Артериальная гипертензия: {{ data_art }}</p> </font>
+
+    <font color="green">
+    {% if data_onmk > 0.5 %}
+        <font color="red">
+    {% endif%}
+            <p>ОНМК: {{ data_onmk }}</p></font>
+<font color="green">
+    {% if data_steno > 0.5 %}
+        <font color="red">
+    {% endif%}
+            <p>Стенокардия, ИБС, инфаркт миокарда: {{ data_steno }}</p></font>
+
+<font color="green">
+    {% if data_heart > 0.5 %}
+        <font color="red">
+    {% endif%}
+
+            <p>Сердечная недостаточность: {{ data_heart }}</p></font>
+
+    <font color="blue">
+<h1>Рекомендации:</h1>
+    {{ rekomend }}</font>
+{% endblock %}

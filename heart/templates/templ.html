@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Задача № 1{% endblock %}
+{% block content %}
+<p>Уважаемый(ая) <font color ='red'>{{ person_name }}</font>,</p>
+<p>Спасибо, что вы сделали заказ в <font size='5' color='green'>{{ company }}</font>. Он будет
+доставлен вам <font color='blue'>{{ ship_date|date:"F j,Y" }}</font>,</p>
+{% if ordered_warranty %}
+<p>Сведения о гарантийных обязательствах вы найдете внутри упаковки</p>
+{% else %}
+<p>Вы не заказывали гарантию, поэтому должны будете действовать самостоятельно,
+когда изделие неизбежно выйдет из строя.</p>
+{% endif %}
+<p>С уважением, <br/>{{ company }}</p>
+<p>Список</p>
+<ul>
+{% for item in ilst %}
+<li>{{ item }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

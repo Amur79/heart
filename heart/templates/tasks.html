@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Задача № 1{% endblock %}
+{% block content %}
+<p>Вычислить гипотенузу прямоугольного треугольника. Катеты вводит пользователь. </p>
+    <form action="/tasks/1/" method="get">
+        <p>Катет 1: {{ k_1 }} <input type="text" name="k1"></p>
+        <p>Катет 2: {{ k_2 }} <input type="text" name="k2"></p>
+        <input class="btn btn-primary" type="submit" value="Вычислить">
+    </form>
+
+<p>Гипотенуза: {{ gip }}. </p>
+{% endblock %}
